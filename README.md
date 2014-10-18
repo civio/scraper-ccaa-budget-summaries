@@ -19,9 +19,9 @@ Disponibles en la [web del INE][1]. Elegimos el año que nos interese, y todas l
 
 [1]: http://www.ine.es/jaxiBD/tabla.do?per=12&type=db&divi=DPOP&idtab=1
 
-### Actualizando la aplicación
+### Actualizando Dónde van mis impuestos
 
-Cambios necesarios:
+Una vez obtenidos los datos para el nuevo año, es necesario realizar estos cambios en DVMI:
 
 1. Añadir el archivo con datos de población, p.ej. `Censo2012.csv`
 2. Actualizar el archivo con datos presupuestarios, `BudgetData.csv`
