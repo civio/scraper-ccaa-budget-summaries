@@ -95,8 +95,7 @@ def parse_file(filename)
   end
 end
 
-# puts CSV::generate_line(['year', 'region_id', 'policy_id', 'policy_label', 'total'])
-puts 'Ano,Idcomu,Codigo,Funcion,Total'  # Header expected by Javascript in DVMI
+puts 'year,region_id,policy_id,policy_label,total'  # Header expected by Javascript in DVMI
 
 # Parse all files in the staging folder
 Dir['staging/*txt'].each {|filename| parse_file(filename)}
