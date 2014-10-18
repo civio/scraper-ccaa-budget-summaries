@@ -23,7 +23,7 @@ Disponibles en la [web del INE][1]. Elegimos el año que nos interese, y todas l
 
 Una vez obtenidos los datos para el nuevo año, es necesario realizar estos cambios en DVMI:
 
-1. Añadir el archivo con datos de población, p.ej. `Censo2012.csv`
-2. Actualizar el archivo con datos presupuestarios, `BudgetData.csv`
+1. Añadir los datos de población al archivo `Censo.csv`.
+2. Actualizar el archivo con datos presupuestarios, `BudgetData.csv`.
 3. Modificar el array `availableYears` en `ccaa.js` para incluir el nuevo año.
 4. Modificar el texto introductorio en `ccaa.erb` para hacer referencia al nuevo año.
