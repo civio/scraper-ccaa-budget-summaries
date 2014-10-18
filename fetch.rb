@@ -20,7 +20,7 @@ end
 # Get all available data for a given region
 def fetch_region(region)
   begin
-    2012.downto(2000).each do |year|  # Will break when one year is missing (depends on region)
+    2013.downto(2000).each do |year|  # Will break when one year is missing (depends on region)
       fetch_data("%02d" % region, year.to_s)
     end
   rescue Mechanize::ResponseCodeError => ex
