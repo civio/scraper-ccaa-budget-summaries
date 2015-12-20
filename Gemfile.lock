@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    iconv (1.0.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  iconv
+
+BUNDLED WITH
+   1.10.6
