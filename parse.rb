@@ -22,26 +22,33 @@ end
 def get_INE_code(region)
   name_to_INE_map = {
     'comunidad autónoma de andalucía' => 1,
+    'junta de andalucía' => 1,
     'comunidad autónoma de aragón' => 2,
+    'comunidad de aragón' => 2,
     'comunidad autónoma del principado de asturias' => 3,
-    'comunitat valenciana' => 10,
+    'principado de asturias' => 3,
+    'comunidad autónoma de las illes balears' => 4,
     'comunidad autónoma de canarias' => 5,
     'comunidad autónoma de cantabria' => 6,
+    'ag de la comunidad autónoma de cantabria' => 6,
     'comunidad autónoma de castilla y león' => 7,
     'comunidad de castilla y león' => 7,
     'comunidad autónoma de castilla-la mancha' => 8,
+    'junta de castilla-la mancha' => 8,
     'comunidad autónoma de cataluña' => 9,
-    'ciudad autónoma de ceuta' => 18,
+    'comunitat valenciana' => 10,
+    'generalitat valenciana' => 10,
     'comunidad autónoma de extremadura' => 11,
     'comunidad autónoma de galicia' => 12,
-    'comunidad autónoma de las illes balears' => 4,
     'comunidad autónoma de madrid' => 13,
     'comunidad de madrid' => 13,
-    'ciudad autónoma de melilla' => 19,
     'comunidad autónoma de la región de murcia' => 14,
     'comunidad foral de navarra' => 15,
     'comunidad autónoma del país vasco' => 16,
-    'comunidad autónoma de la rioja' => 17
+    'comunidad autónoma de la rioja' => 17,
+    'ag de la comunidad autónoma de la rioja' => 17,
+    'ciudad autónoma de ceuta' => 18,
+    'ciudad autónoma de melilla' => 19
   }
   return name_to_INE_map[to_UTF8(region.downcase)] || "ERROR: #{region}"
 end
@@ -60,7 +67,14 @@ def parse_file(filename)
   title.text.strip =~ /EJERCICIO +(\d\d\d\d)/
   year = $1
 
+  # And get the region name. The fetching script used to ensure that the page
+  # contained data, since it received a 404 for unavailable years. Now, instead,
+  # the site returns an empty table, so we need to be ready to stop parsing
+  # when we find one of those.
+  return if doc.css('h3')[0].nil?
   region_name = doc.css('h3')[0].text.strip
+  region_name.gsub!(/\*$/, '')   # Remove trailing * indicating a footnote, e.g. Navarra 2015
+  region_name.strip!
   
   # ...make sure it's fine...
   if year.nil? or year.empty? or region_name.nil? or region_name.empty?
