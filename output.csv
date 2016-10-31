@@ -210,6 +210,28 @@ year,region_id,policy_id,policy_label,total
 2015,1,93,Administración Financiera y Tributaria,129454335.00
 2015,1,94,Transferencias a otras Administraciones Públicas,3036030610.00
 2015,1,95,Deuda Pública,2642477414.00
+2016,1,11,Justicia,492796212.00
+2016,1,13,Seguridad Ciudadana e Instituciones Penitenciarias,39899325.00
+2016,1,14,Política Exterior,48369353.00
+2016,1,21,Pensiones,23612583.00
+2016,1,23,Servicios Sociales y Promoción Social,2145096232.00
+2016,1,24,Fomento del Empleo,980880354.00
+2016,1,26,Acceso a la Vivienda y Fomento de la Edificación,240878749.00
+2016,1,31,Sanidad,8751156526.00
+2016,1,32,Educación,6809279329.00
+2016,1,33,Cultura,208697111.00
+2016,1,41,"Agricultura, Pesca y Alimentación",2524417925.00
+2016,1,42,Industria y Energía,281344074.00
+2016,1,43,"Comercio, Turismo y Pymes",252788781.00
+2016,1,44,Subvenciones al Transporte,72524332.00
+2016,1,45,Infraestructuras,917174021.00
+2016,1,46,"Investigación, Desarrollo e Innovación",471679386.00
+2016,1,49,Otras Actuaciones de Carácter Económico,244647618.00
+2016,1,91,Alta Dirección,145252807.00
+2016,1,92,Servicios de Carácter General,388546177.00
+2016,1,93,Administración Financiera y Tributaria,128832186.00
+2016,1,94,Transferencias a otras Administraciones Públicas,3125530358.00
+2016,1,95,Deuda Pública,2997082125.00
 2006,2,11,Justicia,2067002.55
 2006,2,13,Seguridad Ciudadana e Instituciones Penitenciarias,11960196.72
 2006,2,14,Política Exterior,9370297.87
@@ -421,6 +443,28 @@ year,region_id,policy_id,policy_label,total
 2015,2,93,Administración Financiera y Tributaria,90575492.72
 2015,2,94,Transferencias a otras Administraciones Públicas,60419838.83
 2015,2,95,Deuda Pública,815332264.49
+2016,2,11,Justicia,71578433.33
+2016,2,13,Seguridad Ciudadana e Instituciones Penitenciarias,6617073.02
+2016,2,14,Política Exterior,4934221.95
+2016,2,21,Pensiones,4606500.00
+2016,2,23,Servicios Sociales y Promoción Social,351433277.52
+2016,2,24,Fomento del Empleo,99755648.10
+2016,2,26,Acceso a la Vivienda y Fomento de la Edificación,32934419.37
+2016,2,31,Sanidad,1789177507.14
+2016,2,32,Educación,970193666.23
+2016,2,33,Cultura,25379849.26
+2016,2,41,"Agricultura, Pesca y Alimentación",631230481.22
+2016,2,42,Industria y Energía,17713624.85
+2016,2,43,"Comercio, Turismo y Pymes",29971329.85
+2016,2,44,Subvenciones al Transporte,6751054.48
+2016,2,45,Infraestructuras,185258525.28
+2016,2,46,"Investigación, Desarrollo e Innovación",61295343.67
+2016,2,49,Otras Actuaciones de Carácter Económico,16652346.85
+2016,2,91,Alta Dirección,24177841.88
+2016,2,92,Servicios de Carácter General,148133086.39
+2016,2,93,Administración Financiera y Tributaria,83930417.80
+2016,2,94,Transferencias a otras Administraciones Públicas,49281455.51
+2016,2,95,Deuda Pública,518951894.93
 2006,3,11,Justicia,8576870.00
 2006,3,13,Seguridad Ciudadana e Instituciones Penitenciarias,26412042.00
 2006,3,14,Política Exterior,12385209.00
@@ -623,6 +667,28 @@ year,region_id,policy_id,policy_label,total
 2015,3,93,Administración Financiera y Tributaria,28867641.00
 2015,3,94,Transferencias a otras Administraciones Públicas,4200000.00
 2015,3,95,Deuda Pública,473980000.00
+2016,3,11,Justicia,53649642.00
+2016,3,13,Seguridad Ciudadana e Instituciones Penitenciarias,35804083.00
+2016,3,14,Política Exterior,4549023.00
+2016,3,21,Pensiones,2443465.00
+2016,3,23,Servicios Sociales y Promoción Social,382683818.00
+2016,3,24,Fomento del Empleo,94573768.00
+2016,3,26,Acceso a la Vivienda y Fomento de la Edificación,32831052.00
+2016,3,31,Sanidad,1484781164.00
+2016,3,32,Educación,719637407.00
+2016,3,33,Cultura,36689273.00
+2016,3,41,"Agricultura, Pesca y Alimentación",138153417.00
+2016,3,42,Industria y Energía,25619462.00
+2016,3,43,"Comercio, Turismo y Pymes",10520088.00
+2016,3,44,Subvenciones al Transporte,29480000.00
+2016,3,45,Infraestructuras,212728922.00
+2016,3,46,"Investigación, Desarrollo e Innovación",25569543.00
+2016,3,49,Otras Actuaciones de Carácter Económico,28767757.00
+2016,3,91,Alta Dirección,19544556.00
+2016,3,92,Servicios de Carácter General,108691602.00
+2016,3,93,Administración Financiera y Tributaria,28779571.00
+2016,3,94,Transferencias a otras Administraciones Públicas,4200000.00
+2016,3,95,Deuda Pública,473980000.00
 2006,4,11,Justicia,100000.00
 2006,4,13,Seguridad Ciudadana e Instituciones Penitenciarias,21826475.18
 2006,4,14,Política Exterior,17043694.00
@@ -834,6 +900,28 @@ year,region_id,policy_id,policy_label,total
 2015,4,93,Administración Financiera y Tributaria,15084710.00
 2015,4,94,Transferencias a otras Administraciones Públicas,283995287.00
 2015,4,95,Deuda Pública,788761892.00
+2016,4,11,Justicia,113372.00
+2016,4,13,Seguridad Ciudadana e Instituciones Penitenciarias,21022881.00
+2016,4,14,Política Exterior,4663338.00
+2016,4,21,Pensiones,52399602.00
+2016,4,23,Servicios Sociales y Promoción Social,101453532.00
+2016,4,24,Fomento del Empleo,59775360.00
+2016,4,26,Acceso a la Vivienda y Fomento de la Edificación,12891087.00
+2016,4,31,Sanidad,1389949028.00
+2016,4,32,Educación,816254749.00
+2016,4,33,Cultura,42481097.00
+2016,4,41,"Agricultura, Pesca y Alimentación",52104398.00
+2016,4,42,Industria y Energía,14497467.00
+2016,4,43,"Comercio, Turismo y Pymes",40010850.00
+2016,4,44,Subvenciones al Transporte,16009519.00
+2016,4,45,Infraestructuras,226410253.00
+2016,4,46,"Investigación, Desarrollo e Innovación",21001939.00
+2016,4,49,Otras Actuaciones de Carácter Económico,14897133.00
+2016,4,91,Alta Dirección,28873520.00
+2016,4,92,Servicios de Carácter General,152052918.00
+2016,4,93,Administración Financiera y Tributaria,16404459.00
+2016,4,94,Transferencias a otras Administraciones Públicas,300116816.00
+2016,4,95,Deuda Pública,857513380.00
 2006,5,11,Justicia,131615662.00
 2006,5,13,Seguridad Ciudadana e Instituciones Penitenciarias,27045697.00
 2006,5,14,Política Exterior,21020721.00
@@ -1051,6 +1139,28 @@ year,region_id,policy_id,policy_label,total
 2015,5,93,Administración Financiera y Tributaria,68547447.00
 2015,5,94,Transferencias a otras Administraciones Públicas,668608294.59
 2015,5,95,Deuda Pública,655330000.00
+2016,5,11,Justicia,132626633.00
+2016,5,13,Seguridad Ciudadana e Instituciones Penitenciarias,26075980.00
+2016,5,14,Política Exterior,6529005.00
+2016,5,21,Pensiones,3150000.00
+2016,5,23,Servicios Sociales y Promoción Social,305409518.00
+2016,5,24,Fomento del Empleo,185414606.00
+2016,5,26,Acceso a la Vivienda y Fomento de la Edificación,71834972.00
+2016,5,31,Sanidad,2631136733.00
+2016,5,32,Educación,1502565258.00
+2016,5,33,Cultura,20526270.00
+2016,5,41,"Agricultura, Pesca y Alimentación",68613968.00
+2016,5,42,Industria y Energía,24899036.00
+2016,5,43,"Comercio, Turismo y Pymes",74642703.00
+2016,5,44,Subvenciones al Transporte,58641269.00
+2016,5,45,Infraestructuras,183455106.00
+2016,5,46,"Investigación, Desarrollo e Innovación",76541830.00
+2016,5,49,Otras Actuaciones de Carácter Económico,67298682.00
+2016,5,91,Alta Dirección,47944671.00
+2016,5,92,Servicios de Carácter General,115082038.00
+2016,5,93,Administración Financiera y Tributaria,56043735.00
+2016,5,94,Transferencias a otras Administraciones Públicas,696763297.00
+2016,5,95,Deuda Pública,909634000.00
 2006,6,11,Justicia,900694.00
 2006,6,13,Seguridad Ciudadana e Instituciones Penitenciarias,9356767.00
 2006,6,14,Política Exterior,7043926.00
@@ -1253,6 +1363,28 @@ year,region_id,policy_id,policy_label,total
 2015,6,93,Administración Financiera y Tributaria,25732792.00
 2015,6,94,Transferencias a otras Administraciones Públicas,4340000.00
 2015,6,95,Deuda Pública,400212795.00
+2016,6,11,Justicia,29211353.00
+2016,6,13,Seguridad Ciudadana e Instituciones Penitenciarias,12281027.00
+2016,6,14,Política Exterior,1815992.00
+2016,6,21,Pensiones,27000.00
+2016,6,23,Servicios Sociales y Promoción Social,218363955.00
+2016,6,24,Fomento del Empleo,93681369.00
+2016,6,26,Acceso a la Vivienda y Fomento de la Edificación,21880790.00
+2016,6,31,Sanidad,805753103.00
+2016,6,32,Educación,527418341.00
+2016,6,33,Cultura,24355208.00
+2016,6,41,"Agricultura, Pesca y Alimentación",44763391.00
+2016,6,42,Industria y Energía,26475468.00
+2016,6,43,"Comercio, Turismo y Pymes",16787772.00
+2016,6,44,Subvenciones al Transporte,2287000.00
+2016,6,45,Infraestructuras,193789124.00
+2016,6,46,"Investigación, Desarrollo e Innovación",4070631.00
+2016,6,49,Otras Actuaciones de Carácter Económico,32330468.00
+2016,6,91,Alta Dirección,9302906.00
+2016,6,92,Servicios de Carácter General,29187306.00
+2016,6,93,Administración Financiera y Tributaria,26098653.00
+2016,6,94,Transferencias a otras Administraciones Públicas,15742024.00
+2016,6,95,Deuda Pública,329850000.00
 2006,7,11,Justicia,614594.00
 2006,7,13,Seguridad Ciudadana e Instituciones Penitenciarias,13640341.00
 2006,7,14,Política Exterior,1973479.00
@@ -1458,6 +1590,28 @@ year,region_id,policy_id,policy_label,total
 2015,7,93,Administración Financiera y Tributaria,31680929.00
 2015,7,94,Transferencias a otras Administraciones Públicas,81459825.00
 2015,7,95,Deuda Pública,1078999091.00
+2016,7,11,Justicia,45700.00
+2016,7,13,Seguridad Ciudadana e Instituciones Penitenciarias,11774492.00
+2016,7,14,Política Exterior,5338341.00
+2016,7,21,Pensiones,125500000.00
+2016,7,23,Servicios Sociales y Promoción Social,739722946.00
+2016,7,24,Fomento del Empleo,239748443.00
+2016,7,26,Acceso a la Vivienda y Fomento de la Edificación,39039002.00
+2016,7,31,Sanidad,3285027920.00
+2016,7,32,Educación,1875965864.00
+2016,7,33,Cultura,91930345.00
+2016,7,41,"Agricultura, Pesca y Alimentación",1318536495.00
+2016,7,42,Industria y Energía,137108805.00
+2016,7,43,"Comercio, Turismo y Pymes",38065663.00
+2016,7,44,Subvenciones al Transporte,18039551.00
+2016,7,45,Infraestructuras,386687719.00
+2016,7,46,"Investigación, Desarrollo e Innovación",111995278.00
+2016,7,49,Otras Actuaciones de Carácter Económico,83594975.00
+2016,7,91,Alta Dirección,31351643.00
+2016,7,92,Servicios de Carácter General,105955437.00
+2016,7,93,Administración Financiera y Tributaria,33336710.00
+2016,7,94,Transferencias a otras Administraciones Públicas,81957839.00
+2016,7,95,Deuda Pública,1082976075.00
 2006,8,11,Justicia,142130.00
 2006,8,13,Seguridad Ciudadana e Instituciones Penitenciarias,14695030.00
 2006,8,14,Política Exterior,32456600.00
@@ -1661,6 +1815,27 @@ year,region_id,policy_id,policy_label,total
 2015,8,93,Administración Financiera y Tributaria,26373340.00
 2015,8,94,Transferencias a otras Administraciones Públicas,5279700.00
 2015,8,95,Deuda Pública,1682393700.00
+2016,8,13,Seguridad Ciudadana e Instituciones Penitenciarias,8316030.00
+2016,8,14,Política Exterior,3671730.00
+2016,8,21,Pensiones,1440000.00
+2016,8,23,Servicios Sociales y Promoción Social,657052890.00
+2016,8,24,Fomento del Empleo,206803840.00
+2016,8,26,Acceso a la Vivienda y Fomento de la Edificación,42983640.00
+2016,8,31,Sanidad,2599916230.00
+2016,8,32,Educación,1512177860.00
+2016,8,33,Cultura,38161480.00
+2016,8,41,"Agricultura, Pesca y Alimentación",1264289030.00
+2016,8,42,Industria y Energía,11057480.00
+2016,8,43,"Comercio, Turismo y Pymes",26669500.00
+2016,8,44,Subvenciones al Transporte,4676120.00
+2016,8,45,Infraestructuras,279181350.00
+2016,8,46,"Investigación, Desarrollo e Innovación",28829900.00
+2016,8,49,Otras Actuaciones de Carácter Económico,83031380.00
+2016,8,91,Alta Dirección,23957970.00
+2016,8,92,Servicios de Carácter General,82974750.00
+2016,8,93,Administración Financiera y Tributaria,23372300.00
+2016,8,94,Transferencias a otras Administraciones Públicas,5161100.00
+2016,8,95,Deuda Pública,1516424390.00
 2006,9,11,Justicia,459868785.89
 2006,9,13,Seguridad Ciudadana e Instituciones Penitenciarias,1107597622.58
 2006,9,14,Política Exterior,59054139.07
@@ -1881,6 +2056,28 @@ year,region_id,policy_id,policy_label,total
 2015,9,93,Administración Financiera y Tributaria,60280328.31
 2015,9,94,Transferencias a otras Administraciones Públicas,3330079115.94
 2015,9,95,Deuda Pública,7003334188.79
+2016,9,11,Justicia,551980466.74
+2016,9,13,Seguridad Ciudadana e Instituciones Penitenciarias,1535038351.16
+2016,9,14,Política Exterior,18583574.74
+2016,9,21,Pensiones,57050000.00
+2016,9,23,Servicios Sociales y Promoción Social,1937622319.33
+2016,9,24,Fomento del Empleo,678811563.72
+2016,9,26,Acceso a la Vivienda y Fomento de la Edificación,166865296.61
+2016,9,31,Sanidad,8432677652.72
+2016,9,32,Educación,5192849029.08
+2016,9,33,Cultura,298446259.21
+2016,9,41,"Agricultura, Pesca y Alimentación",239097659.39
+2016,9,42,Industria y Energía,64747773.51
+2016,9,43,"Comercio, Turismo y Pymes",150687882.24
+2016,9,44,Subvenciones al Transporte,309040767.34
+2016,9,45,Infraestructuras,1180147623.59
+2016,9,46,"Investigación, Desarrollo e Innovación",218221260.64
+2016,9,49,Otras Actuaciones de Carácter Económico,168881013.12
+2016,9,91,Alta Dirección,174090908.00
+2016,9,92,Servicios de Carácter General,839193405.67
+2016,9,93,Administración Financiera y Tributaria,60280328.31
+2016,9,94,Transferencias a otras Administraciones Públicas,3330154015.26
+2016,9,95,Deuda Pública,7003334188.79
 2006,11,13,Seguridad Ciudadana e Instituciones Penitenciarias,5034109.00
 2006,11,21,Pensiones,5700000.00
 2006,11,23,Servicios Sociales y Promoción Social,229277845.00
@@ -2071,6 +2268,27 @@ year,region_id,policy_id,policy_label,total
 2015,11,93,Administración Financiera y Tributaria,16209069.00
 2015,11,94,Transferencias a otras Administraciones Públicas,41807963.00
 2015,11,95,Deuda Pública,478595272.00
+2016,11,13,Seguridad Ciudadana e Instituciones Penitenciarias,6534532.00
+2016,11,14,Política Exterior,12945014.00
+2016,11,21,Pensiones,3218186.00
+2016,11,23,Servicios Sociales y Promoción Social,429491037.00
+2016,11,24,Fomento del Empleo,249646237.00
+2016,11,26,Acceso a la Vivienda y Fomento de la Edificación,48458475.00
+2016,11,31,Sanidad,1550101891.00
+2016,11,32,Educación,1016192181.00
+2016,11,33,Cultura,56298556.00
+2016,11,41,"Agricultura, Pesca y Alimentación",737752843.00
+2016,11,42,Industria y Energía,18401040.00
+2016,11,43,"Comercio, Turismo y Pymes",79520330.00
+2016,11,44,Subvenciones al Transporte,4050000.00
+2016,11,45,Infraestructuras,346119507.00
+2016,11,46,"Investigación, Desarrollo e Innovación",54389878.00
+2016,11,49,Otras Actuaciones de Carácter Económico,48694842.00
+2016,11,91,Alta Dirección,21640003.00
+2016,11,92,Servicios de Carácter General,74390330.00
+2016,11,93,Administración Financiera y Tributaria,16463814.00
+2016,11,94,Transferencias a otras Administraciones Públicas,43807963.00
+2016,11,95,Deuda Pública,379311405.00
 2006,12,11,Justicia,87909668.00
 2006,12,13,Seguridad Ciudadana e Instituciones Penitenciarias,34573787.00
 2006,12,14,Política Exterior,9328576.00
@@ -2282,6 +2500,28 @@ year,region_id,policy_id,policy_label,total
 2015,12,93,Administración Financiera y Tributaria,45988700.00
 2015,12,94,Transferencias a otras Administraciones Públicas,117460806.00
 2015,12,95,Deuda Pública,1515100598.00
+2016,12,11,Justicia,128243751.00
+2016,12,13,Seguridad Ciudadana e Instituciones Penitenciarias,24016238.00
+2016,12,14,Política Exterior,6686577.00
+2016,12,21,Pensiones,52752061.00
+2016,12,23,Servicios Sociales y Promoción Social,589915529.00
+2016,12,24,Fomento del Empleo,188751483.00
+2016,12,26,Acceso a la Vivienda y Fomento de la Edificación,66948541.00
+2016,12,31,Sanidad,3511530722.00
+2016,12,32,Educación,2132265232.00
+2016,12,33,Cultura,88530457.00
+2016,12,41,"Agricultura, Pesca y Alimentación",436389076.00
+2016,12,42,Industria y Energía,113485534.00
+2016,12,43,"Comercio, Turismo y Pymes",163919376.00
+2016,12,44,Subvenciones al Transporte,10420312.00
+2016,12,45,Infraestructuras,516571369.00
+2016,12,46,"Investigación, Desarrollo e Innovación",130675818.00
+2016,12,49,Otras Actuaciones de Carácter Económico,123646916.00
+2016,12,91,Alta Dirección,33098424.00
+2016,12,92,Servicios de Carácter General,227230771.00
+2016,12,93,Administración Financiera y Tributaria,46336574.00
+2016,12,94,Transferencias a otras Administraciones Públicas,120626255.00
+2016,12,95,Deuda Pública,1598200386.00
 2006,13,11,Justicia,323020086.00
 2006,13,13,Seguridad Ciudadana e Instituciones Penitenciarias,187418666.00
 2006,13,14,Política Exterior,29544376.00
@@ -2478,6 +2718,28 @@ year,region_id,policy_id,policy_label,total
 2015,13,93,Administración Financiera y Tributaria,92018589.00
 2015,13,94,Transferencias a otras Administraciones Públicas,66523635.00
 2015,13,95,Deuda Pública,3885955165.00
+2016,13,11,Justicia,402191983.00
+2016,13,13,Seguridad Ciudadana e Instituciones Penitenciarias,226190210.00
+2016,13,14,Política Exterior,2352795.00
+2016,13,21,Pensiones,261355.00
+2016,13,23,Servicios Sociales y Promoción Social,1520787489.00
+2016,13,24,Fomento del Empleo,359962022.00
+2016,13,26,Acceso a la Vivienda y Fomento de la Edificación,491712203.00
+2016,13,31,Sanidad,7417632103.00
+2016,13,32,Educación,4326260257.00
+2016,13,33,Cultura,155954905.00
+2016,13,41,"Agricultura, Pesca y Alimentación",33927477.00
+2016,13,42,Industria y Energía,12582453.00
+2016,13,43,"Comercio, Turismo y Pymes",17913166.00
+2016,13,44,Subvenciones al Transporte,1191124707.00
+2016,13,45,Infraestructuras,260153410.00
+2016,13,46,"Investigación, Desarrollo e Innovación",485052032.00
+2016,13,49,Otras Actuaciones de Carácter Económico,25081697.00
+2016,13,91,Alta Dirección,69134329.00
+2016,13,92,Servicios de Carácter General,428100224.00
+2016,13,93,Administración Financiera y Tributaria,118630277.00
+2016,13,94,Transferencias a otras Administraciones Públicas,66156873.00
+2016,13,95,Deuda Pública,2528447338.00
 2006,14,13,Seguridad Ciudadana e Instituciones Penitenciarias,30032851.00
 2006,14,14,Política Exterior,4273519.00
 2006,14,21,Pensiones,1888236.00
@@ -2681,6 +2943,26 @@ year,region_id,policy_id,policy_label,total
 2015,14,92,Servicios de Carácter General,71978684.00
 2015,14,93,Administración Financiera y Tributaria,32243374.00
 2015,14,95,Deuda Pública,718872045.00
+2016,14,13,Seguridad Ciudadana e Instituciones Penitenciarias,45713460.00
+2016,14,14,Política Exterior,1736268.00
+2016,14,21,Pensiones,155255.00
+2016,14,23,Servicios Sociales y Promoción Social,321828749.00
+2016,14,24,Fomento del Empleo,74830047.00
+2016,14,26,Acceso a la Vivienda y Fomento de la Edificación,53968916.00
+2016,14,31,Sanidad,1742312598.00
+2016,14,32,Educación,1296591331.00
+2016,14,33,Cultura,37907072.00
+2016,14,41,"Agricultura, Pesca y Alimentación",93775269.00
+2016,14,42,Industria y Energía,39334486.00
+2016,14,43,"Comercio, Turismo y Pymes",2085697.00
+2016,14,44,Subvenciones al Transporte,4452073.00
+2016,14,45,Infraestructuras,183752239.00
+2016,14,46,"Investigación, Desarrollo e Innovación",25493498.00
+2016,14,49,Otras Actuaciones de Carácter Económico,15622573.00
+2016,14,91,Alta Dirección,16514180.00
+2016,14,92,Servicios de Carácter General,86798392.00
+2016,14,93,Administración Financiera y Tributaria,39331902.00
+2016,14,95,Deuda Pública,834009043.00
 2006,15,11,Justicia,24376626.00
 2006,15,13,Seguridad Ciudadana e Instituciones Penitenciarias,68541104.00
 2006,15,14,Política Exterior,19991528.00
@@ -2910,6 +3192,28 @@ year,region_id,policy_id,policy_label,total
 2015,15,93,Administración Financiera y Tributaria,16751136.00
 2015,15,94,Transferencias a otras Administraciones Públicas,758177883.00
 2015,15,95,Deuda Pública,438087376.00
+2016,15,11,Justicia,27021535.00
+2016,15,13,Seguridad Ciudadana e Instituciones Penitenciarias,84942980.00
+2016,15,14,Política Exterior,6987382.00
+2016,15,21,Pensiones,14334879.00
+2016,15,23,Servicios Sociales y Promoción Social,354301868.00
+2016,15,24,Fomento del Empleo,46577816.00
+2016,15,26,Acceso a la Vivienda y Fomento de la Edificación,45913023.00
+2016,15,31,Sanidad,977907224.00
+2016,15,32,Educación,601569719.00
+2016,15,33,Cultura,44419952.00
+2016,15,41,"Agricultura, Pesca y Alimentación",94866733.00
+2016,15,42,Industria y Energía,24761216.00
+2016,15,43,"Comercio, Turismo y Pymes",7618845.00
+2016,15,44,Subvenciones al Transporte,27012037.00
+2016,15,45,Infraestructuras,127876780.00
+2016,15,46,"Investigación, Desarrollo e Innovación",70157335.00
+2016,15,49,Otras Actuaciones de Carácter Económico,6135502.00
+2016,15,91,Alta Dirección,17880275.00
+2016,15,92,Servicios de Carácter General,95260031.00
+2016,15,93,Administración Financiera y Tributaria,17152764.00
+2016,15,94,Transferencias a otras Administraciones Públicas,782991576.00
+2016,15,95,Deuda Pública,529615554.00
 2006,16,11,Justicia,126013548.00
 2006,16,13,Seguridad Ciudadana e Instituciones Penitenciarias,521457703.00
 2006,16,14,Política Exterior,44864905.00
@@ -3100,6 +3404,25 @@ year,region_id,policy_id,policy_label,total
 2015,16,92,Servicios de Carácter General,434669530.00
 2015,16,93,Administración Financiera y Tributaria,22480404.00
 2015,16,95,Deuda Pública,989431001.00
+2016,16,11,Justicia,173242216.00
+2016,16,13,Seguridad Ciudadana e Instituciones Penitenciarias,615729354.00
+2016,16,14,Política Exterior,50733814.00
+2016,16,23,Servicios Sociales y Promoción Social,614395725.00
+2016,16,24,Fomento del Empleo,392860011.00
+2016,16,26,Acceso a la Vivienda y Fomento de la Edificación,112679947.00
+2016,16,31,Sanidad,3448048053.00
+2016,16,32,Educación,2647981689.00
+2016,16,33,Cultura,65486028.00
+2016,16,41,"Agricultura, Pesca y Alimentación",111621719.00
+2016,16,42,Industria y Energía,20023475.00
+2016,16,43,"Comercio, Turismo y Pymes",64309705.00
+2016,16,45,Infraestructuras,667750533.00
+2016,16,46,"Investigación, Desarrollo e Innovación",312062745.00
+2016,16,49,Otras Actuaciones de Carácter Económico,44822487.00
+2016,16,91,Alta Dirección,48711447.00
+2016,16,92,Servicios de Carácter General,412499953.00
+2016,16,93,Administración Financiera y Tributaria,22399422.00
+2016,16,95,Deuda Pública,1170131190.00
 2006,17,13,Seguridad Ciudadana e Instituciones Penitenciarias,8610617.00
 2006,17,14,Política Exterior,5394877.00
 2006,17,21,Pensiones,60000.00
@@ -3291,6 +3614,28 @@ year,region_id,policy_id,policy_label,total
 2015,17,93,Administración Financiera y Tributaria,11564778.00
 2015,17,94,Transferencias a otras Administraciones Públicas,947000.00
 2015,17,95,Deuda Pública,137000646.00
+2016,17,11,Justicia,18009860.00
+2016,17,13,Seguridad Ciudadana e Instituciones Penitenciarias,8641927.00
+2016,17,14,Política Exterior,2128413.00
+2016,17,21,Pensiones,6000.00
+2016,17,23,Servicios Sociales y Promoción Social,113086312.00
+2016,17,24,Fomento del Empleo,21562208.00
+2016,17,26,Acceso a la Vivienda y Fomento de la Edificación,6079759.00
+2016,17,31,Sanidad,406963277.00
+2016,17,32,Educación,245883296.00
+2016,17,33,Cultura,19158861.00
+2016,17,41,"Agricultura, Pesca y Alimentación",57785912.00
+2016,17,42,Industria y Energía,2634758.00
+2016,17,43,"Comercio, Turismo y Pymes",27648842.00
+2016,17,44,Subvenciones al Transporte,3379000.00
+2016,17,45,Infraestructuras,93038035.00
+2016,17,46,"Investigación, Desarrollo e Innovación",73303485.00
+2016,17,49,Otras Actuaciones de Carácter Económico,5154902.00
+2016,17,91,Alta Dirección,9878450.00
+2016,17,92,Servicios de Carácter General,17958684.00
+2016,17,93,Administración Financiera y Tributaria,15537618.00
+2016,17,94,Transferencias a otras Administraciones Públicas,980650.00
+2016,17,95,Deuda Pública,188302584.00
 2006,10,11,Justicia,179327570.00
 2006,10,13,Seguridad Ciudadana e Instituciones Penitenciarias,57841110.00
 2006,10,14,Política Exterior,33182930.00
@@ -3493,6 +3838,28 @@ year,region_id,policy_id,policy_label,total
 2015,10,93,Administración Financiera y Tributaria,104977590.00
 2015,10,94,Transferencias a otras Administraciones Públicas,28491870.00
 2015,10,95,Deuda Pública,4940754290.00
+2016,10,11,Justicia,264124400.00
+2016,10,13,Seguridad Ciudadana e Instituciones Penitenciarias,98771510.00
+2016,10,14,Política Exterior,15701140.00
+2016,10,21,Pensiones,220000.00
+2016,10,23,Servicios Sociales y Promoción Social,965735840.00
+2016,10,24,Fomento del Empleo,328047820.00
+2016,10,26,Acceso a la Vivienda y Fomento de la Edificación,79008090.00
+2016,10,31,Sanidad,5896703080.00
+2016,10,32,Educación,4168132030.00
+2016,10,33,Cultura,116077600.00
+2016,10,41,"Agricultura, Pesca y Alimentación",449955650.00
+2016,10,42,Industria y Energía,98618710.00
+2016,10,43,"Comercio, Turismo y Pymes",126763710.00
+2016,10,44,Subvenciones al Transporte,53485000.00
+2016,10,45,Infraestructuras,264679810.00
+2016,10,46,"Investigación, Desarrollo e Innovación",165063990.00
+2016,10,49,Otras Actuaciones de Carácter Económico,12204510.00
+2016,10,91,Alta Dirección,68117290.00
+2016,10,92,Servicios de Carácter General,276159150.00
+2016,10,93,Administración Financiera y Tributaria,84428130.00
+2016,10,94,Transferencias a otras Administraciones Públicas,28918060.00
+2016,10,95,Deuda Pública,4000562960.00
 2006,18,13,Seguridad Ciudadana e Instituciones Penitenciarias,2946660.60
 2006,18,23,Servicios Sociales y Promoción Social,11167495.11
 2006,18,24,Fomento del Empleo,4178888.03
