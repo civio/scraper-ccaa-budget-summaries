@@ -106,19 +106,20 @@ def parse_file(filename)
   
     # And output. Note: at the moment we just care about what gets shown in the DVMI region 
     # visualization, so we ignore a bunch of stuff. We display only:
-    #  - the total expense, even if we have the chapter breakdown. 
     #  - region id is enough, name not needed.
     #  - only for years after (and including) 2006
     #  - only for actual regions, ignore the total
     #  - only non-zero chapter-level data, ignore 'expense area' subtotals
     if year.to_i >= 2006 and region_id != '00' and policy_id =~ /\d\d/ and !values.last.empty?
       region_INE_code = get_INE_code(region_name)
-      puts CSV::generate_line([year, region_INE_code, policy_id, policy_label, values.last])
+      data = [year, region_INE_code, policy_id, policy_label]
+      0.upto(9) {|i| data.push(values[i]) }
+      puts CSV::generate_line(data)
     end
   end
 end
 
-puts 'year,region_id,policy_id,policy_label,total'  # Header expected by Javascript in DVMI
+puts 'year,region_id,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
 
 # Parse all files in the staging folder
 Dir['staging/*txt'].each {|filename| parse_file(filename)}
