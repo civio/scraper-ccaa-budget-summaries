@@ -6,11 +6,11 @@ require 'mechanize'
 @agent = Mechanize.new
 
 # Go through the landing page so a 'session' is started, otherwise we'll get rejected later :/
-@agent.get('http://serviciosweb.meh.es/apps/publicacionpresupuestos/aspx/inicio.aspx')
+@agent.get('http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/inicio.aspx')
 
 # Download data and store into staging folder
 def fetch_data(region, year)
-  url = "http://serviciosweb.meh.es/apps/publicacionpresupuestos/aspx/Consulta_CFuncionalDC.aspx?cente=#{region}&ano=#{year}"
+  url = "http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/Consulta_CFuncionalDC.aspx?cente=#{region}&ano=#{year}"
   print "Region #{region}, Year #{year}... "
   html = @agent.get(url)
   File.open("staging/#{region}.#{year}.txt", 'w') {|f| f.write(html.content) }
