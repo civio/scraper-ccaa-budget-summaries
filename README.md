@@ -5,18 +5,17 @@
 Los datos están disponibles en [la web del Ministerio de Hacienda][1], pero tenemos que descargarlos usando un scraper (que guarda las páginas en el directorio `staging`) para parsearlos posteriormente:
 
     $ ruby fetch.rb
-    $ ruby parse.rb > BudgetData.csv
+    $ ruby parse.rb | sort > output.sorted.csv
+
+Ordenamos el resultado para que se pueda comparar con los datos ya existentes y detectar así cualquier error/anomalía.
 
 [1]: http://serviciosweb.meh.es/apps/publicacionpresupuestos/aspx/inicio.aspx
 
 ### Datos de población
 
-Disponibles en la [web del INE][2]. Elegimos el año que nos interese, y todas las comunidades autónomas, y luego descargamos como Excel. (Ojo que si intentamos copi-pegar directamente podemos perder los ceros finales.) Algunas notas:
+Disponibles en la [web del INE][2]. Elegimos el año que nos interese, y todas las comunidades autónomas, y luego descargamos como Excel. (Ojo que si intentamos copi-pegar directamente podemos perder los ceros finales.) Hay que modificar un poco el formato para que encaje en lo que necesitamos, lo más sencillo es toquetear un poco en Excel.
 
- * No nos interesa el desglose hombre/mujer, pero está por razones históricas.
- * Nos quedamos sólo con las líneas que contienen datos, y añadimos una cabecera fijándonos en los años anteriores.
- * No sé si es posible descargar los identificadores de las CCAA (1-19), que es lo realmente importante, así que los añado a mano.
- * Al final, como hay que quitar signos de puntuación, meter el id a mano, añadir la columan del año... lo más sencillo es meterlo en Excel y toquetear hasta que tengamos lo que necesitamos.
+Es posible que los datos de población del año en curso no estén aún disponibles. En ese caso tenemos que duplicar los del año anterior, porque el mapa no es capaz de "rellenar huecos" como sí hace la aplicación principal. He tenido que hacer esto -temporalmente- con los datos de 2017.
 
 [2]: http://www.ine.es/jaxiT3/Tabla.htm?t=2853&L=0
 
