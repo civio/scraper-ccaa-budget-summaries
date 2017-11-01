@@ -26,7 +26,7 @@ def fetch_region(region)
     # We used to break when one year was missing (the actual year depends on the region)
     # by catching 404s. But most recent versions of the site do not 404, they return
     # an empty table instead, which we'll have to handle downstream.
-    2016.downto(2000).each do |year|
+    2017.downto(2000).each do |year|
       fetch_data("%02d" % region, year.to_s)
     end
   rescue Mechanize::ResponseCodeError => ex
