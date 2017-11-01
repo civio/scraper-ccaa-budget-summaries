@@ -10,7 +10,10 @@ require 'mechanize'
 
 # Download data and store into staging folder
 def fetch_data(region, year)
-  url = "http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/Consulta_CFuncionalDC.aspx?cente=#{region}&ano=#{year}"
+  # Clasificación funcional por capítulos
+  # url = "http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/Consulta_CFuncionalDC.aspx?cente=#{region}&ano=#{year}"
+  # Clasificación funcional por capítulos depurados IFL y PAC
+  url = "http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/Consulta_CFuncionalDCD.aspx?cente=#{region}&ano=#{year}"
   print "Region #{region}, Year #{year}... "
   html = @agent.get(url)
   File.open("staging/#{region}.#{year}.txt", 'w') {|f| f.write(html.content) }
