@@ -16,7 +16,7 @@ def fetch_data(region, year)
   url = "http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/Consulta_CFuncionalDCD.aspx?cente=#{region}&ano=#{year}"
   print "Region #{region}, Year #{year}... "
   html = @agent.get(url)
-  File.open("staging/#{region}.#{year}.txt", 'w') {|f| f.write(html.content) }
+  File.open("staging/#{region}.#{year}.html", 'w') {|f| f.write(html.content) }
   puts "OK"
 end
 

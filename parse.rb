@@ -122,4 +122,4 @@ end
 puts 'year,region_id,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
 
 # Parse all files in the staging folder
-Dir['staging/*txt'].each {|filename| parse_file(filename)}
+Dir['staging/*html'].each {|filename| parse_file(filename)}
