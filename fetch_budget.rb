@@ -4,14 +4,15 @@ require 'rubygems'
 require 'mechanize'
 
 @agent = Mechanize.new
+@agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 # Go through the landing page so a 'session' is started, otherwise we'll get rejected later :/
-@agent.get('http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/inicio.aspx')
+@agent.get('https://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/inicio.aspx')
 
 # Download data and store into staging folder
 def fetch_data(region, year)
   # Clasificación funcional por capítulos depurados IFL y PAC
-  url = "http://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/Consulta_CFuncionalDCD.aspx?cente=#{region}&ano=#{year}"
+  url = "https://serviciostelematicosext.minhap.gob.es/SGCAL/PublicacionPresupuestos/aspx/Consulta_CFuncionalDCD.aspx?cente=#{region}&ano=#{year}"
   print "Region #{region}, Year #{year}... "
   html = @agent.get(url)
   File.open("staging_budget/#{region}_#{year}.html", 'w') {|f| f.write(html.content) }
