@@ -67,7 +67,7 @@ def parse_file(filename)
   
   # I thought the CA name was a good key, but turns out it changes sligthly
   # with time. So we'll use the original id instead, part of the filename
-  filename =~ /\/(\d\d)\./
+  filename =~ /\/(\d\d)\_/
   region_id = $1
   
   # First, get the metadata about the file from the first chunk of text
@@ -122,4 +122,4 @@ end
 puts 'year,region_id,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
 
 # Parse all files in the staging folder
-Dir['staging/*html'].each {|filename| parse_file(filename)}
+Dir['staging_budget/*html'].each {|filename| parse_file(filename)}

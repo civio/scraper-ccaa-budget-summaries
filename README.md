@@ -2,10 +2,10 @@
 
 ### Datos presupuestarios
 
-Los datos están disponibles en [la web del Ministerio de Hacienda][1], pero tenemos que descargarlos usando un scraper (que guarda las páginas en el directorio `staging`) para parsearlos posteriormente:
+Los datos están disponibles en [la web del Ministerio de Hacienda][1], pero tenemos que descargarlos usando un scraper (que guarda las páginas en el directorio `staging_budget`) para parsearlos posteriormente:
 
-    $ ruby fetch.rb
-    $ ruby parse.rb | sort > output.sorted.csv
+    $ ruby fetch_budget.rb
+    $ ruby parse.rb | sort > budget.sorted.csv
 
 Ordenamos el resultado para que se pueda comparar con los datos ya existentes y detectar así cualquier error/anomalía.
 
