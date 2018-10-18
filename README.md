@@ -5,11 +5,22 @@
 Los datos están disponibles en [la web del Ministerio de Hacienda][1], pero tenemos que descargarlos usando un scraper (que guarda las páginas en el directorio `staging_budget`) para parsearlos posteriormente:
 
     $ ruby fetch_budget.rb
-    $ ruby parse.rb | sort > budget.sorted.csv
+    $ ruby parse.rb staging_budget | sort > budget.sorted.csv
 
 Ordenamos el resultado para que se pueda comparar con los datos ya existentes y detectar así cualquier error/anomalía.
 
-[1]: http://serviciosweb.meh.es/apps/publicacionpresupuestos/aspx/inicio.aspx
+[1]: https://serviciosweb.meh.es/apps/publicacionpresupuestos/aspx/inicio.aspx
+
+### Datos de ejecución
+
+Los datos están disponibles en [otra web del Ministerio de Hacienda][1], pero tenemos que descargarlos usando un scraper (que guarda las páginas en el directorio `staging_actual`) para parsearlos posteriormente:
+
+    $ ruby fetch_actual.rb
+    $ ruby parse.rb staging_actual | sort > actual.sorted.csv
+
+Ordenamos el resultado para que se pueda comparar con los datos ya existentes y detectar así cualquier error/anomalía.
+
+[1]: https://serviciostelematicosext.minhap.gob.es/SGCAL/publicacionliquidacion/aspx/menuInicio.aspx
 
 ### Datos de población
 

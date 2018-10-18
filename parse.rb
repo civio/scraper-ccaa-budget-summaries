@@ -59,7 +59,7 @@ def get_INE_code(region)
     'ciudad autónoma de ceuta' => 18,
     'ciudad autónoma de melilla' => 19
   }
-  return name_to_INE_map[to_UTF8(region).downcase] || "ERROR: #{region}"
+  return name_to_INE_map[region.downcase] || "ERROR: #{region}"
 end
 
 def parse_file(filename)
@@ -81,8 +81,9 @@ def parse_file(filename)
   # the site returns an empty table, so we need to be ready to stop parsing
   # when we find one of those.
   return if doc.css('h3')[0].nil?
-  region_name = doc.css('h3')[0].text.strip
-  region_name.gsub!(/\*$/, '')   # Remove trailing * indicating a footnote, e.g. Navarra 2015
+  region_name = to_UTF8(doc.css('h3')[0].text)
+  region_name.gsub!(/\*$/, '')    # Remove trailing * indicating a footnote, e.g. Navarra 2015
+  region_name.gsub!(/\u00a0/, '') # Some weird Unicode no-break spaces sometimes
   region_name.strip!
   
   # ...make sure it's fine...
@@ -99,7 +100,7 @@ def parse_file(filename)
   
     # ...and ignore the subtotal rows
     policy_id = columns.shift.text
-    policy_label = to_UTF8(columns.shift.text)
+    policy_label = to_UTF8(columns.shift.text).strip
   
     # Extract the values from remaining columns
     values = columns.map {|c| clean_number(c.text.strip)}
@@ -121,5 +122,5 @@ end
 
 puts 'year,region_id,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
 
-# Parse all files in the staging folder
-Dir['staging_budget/*html'].each {|filename| parse_file(filename)}
+# Parse all files in the given staging folder
+Dir["#{ARGV[0]}/*html"].each {|filename| parse_file(filename)}
