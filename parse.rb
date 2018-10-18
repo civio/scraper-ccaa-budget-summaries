@@ -59,7 +59,7 @@ def get_INE_code(region)
     'ciudad autónoma de ceuta' => 18,
     'ciudad autónoma de melilla' => 19
   }
-  return name_to_INE_map[to_UTF8(region.downcase)] || "ERROR: #{region}"
+  return name_to_INE_map[to_UTF8(region).downcase] || "ERROR: #{region}"
 end
 
 def parse_file(filename)
