@@ -7,12 +7,12 @@ require 'mechanize'
 @agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 # Go through the landing page so a 'session' is started, otherwise we'll get rejected later :/
-@agent.get('https://serviciostelematicosext.minhap.gob.es/SGCAL/publicacionliquidacion/aspx/menuInicio.aspx')
+@agent.get('https://serviciostelematicosext.hacienda.gob.es/SGCIEF/PublicacionLiquidaciones/aspx/menuInicio.aspx')
 
 # Download data and store into staging folder
 def fetch_data(region, year)
   # Clasificación funcional por capítulos depurados IFL y PAC
-  url = "https://serviciostelematicosext.minhap.gob.es/SGCAL/publicacionliquidacion/aspx/Consulta_CFuncionalDCD.aspx?cente=#{region}&ano=#{year}"
+  url = "https://serviciostelematicosext.hacienda.gob.es/SGCIEF/PublicacionLiquidaciones/aspx/Consulta_CFuncionalDCD.aspx?cente=#{region}&ano=#{year}"
   print "Region #{region}, Year #{year}... "
   html = @agent.get(url)
   File.open("staging_actual/#{region}_#{year}.html", 'w') {|f| f.write(html.content) }
@@ -25,7 +25,7 @@ def fetch_region(region)
     # We used to break when one year was missing (the actual year depends on the region)
     # by catching 404s. But most recent versions of the site do not 404, they return
     # an empty table instead, which we'll have to handle downstream.
-    2017.downto(2000).each do |year|
+    2019.downto(2000).each do |year|
       fetch_data("%02d" % region, year.to_s)
     end
   rescue Mechanize::ResponseCodeError => ex
