@@ -1,16 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    iconv (1.0.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  iconv
 
 RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.2
+   1.17.3

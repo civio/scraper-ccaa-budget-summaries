@@ -3,7 +3,6 @@
 require 'rubygems'
 require 'nokogiri'
 require 'csv'
-require 'iconv'
 
 def clean_number(s)
   s.delete('.').gsub(',','.')
@@ -11,7 +10,7 @@ end
 
 # Always some encoding black magic needed :/ I think the source is wrong (or I screwed up)
 def to_UTF8(s)
-  Iconv.iconv("iso-8859-1", "utf-8", s).first.force_encoding('UTF-8')
+  return s.encode("iso-8859-1").force_encoding("utf-8")
 end
 
 # Unfortunately the region ID in the Ministry of Finance site is not the same
