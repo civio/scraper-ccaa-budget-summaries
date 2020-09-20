@@ -17,49 +17,32 @@ end
 # Unfortunately the region ID in the Ministry of Finance site is not the same
 # as the region ID in the INE site (where we get population from). The latter
 # seems more 'official', so we're using that.
-# Note: there are a couple of different spellings per region in the source data,
-# plus case variations, so be aware of that.
-def get_INE_code(region)
-  name_to_INE_map = {
-    'comunidad autónoma de andalucía' => 1,
-    'junta de andalucía' => 1,
-    'comunidad autónoma de aragón' => 2,
-    'comunidad de aragón' => 2,
-    'diputación general de aragón' => 2,
-    'comunidad autónoma del principado de asturias' => 3,
-    'principado de asturias' => 3,
-    'comunidad autónoma de las illes balears' => 4,
-    'comunidad autónoma de canarias' => 5,
-    'comunidad autónoma de cantabria' => 6,
-    'ag de la comunidad autónoma de cantabria' => 6,
-    'administración general de la comunidad autónoma de cantabria' => 6,
-    'comunidad autónoma de castilla y león' => 7,
-    'comunidad de castilla y león' => 7,
-    'junta de castilla y león' => 7,
-    'comunidad autónoma de castilla-la mancha' => 8,
-    'junta de castilla-la mancha' => 8,
-    'comunidad autónoma de cataluña' => 9,
-    'generalitat de catalunya' => 9,
-    'comunitat valenciana' => 10,
-    'generalitat valenciana' => 10,
-    'comunidad autónoma de extremadura' => 11,
-    'junta de extremadura' => 11,
-    'comunidad autónoma de galicia' => 12,
-    'xunta de galicia' => 12,
-    'comunidad autónoma de madrid' => 13,
-    'comunidad de madrid' => 13,
-    'comunidad autónoma de la región de murcia' => 14,
-    'administración general de la región de murcia' => 14,
-    'comunidad foral de navarra' => 15,
-    'comunidad autónoma del país vasco' => 16,
-    'comunidad autónoma de euskadi' => 16,
-    'comunidad autónoma de la rioja' => 17,
-    'administración general de la comunidad autónoma de la rioja' => 17,
-    'ag de la comunidad autónoma de la rioja' => 17,
-    'ciudad autónoma de ceuta' => 18,
-    'ciudad autónoma de melilla' => 19
-  }
-  return name_to_INE_map[region.downcase] || "ERROR: #{region}"
+# Note: we used the region name inside the content initially, but there are several
+# different spellings per region in the source data 🤷‍♂️, it's a mess.
+def get_INE_code(region_id)
+  region_id_to_INE_id = [
+    0,  # Total
+    1,  # Andalucía
+    2,  # Aragón
+    3,  # Asturías
+    4,  # Baleares
+    5,  # Canarias
+    6,  # Cantabria
+    7,  # Castilla León
+    8,  # Castilla La Mancha
+    9,  # Cataluña
+    11, # Extremadura
+    12, # Galicia
+    13, # Madrid
+    14, # Murcia
+    15, # Navarra
+    16, # Euskadi
+    17, # Rioja
+    10, # Comunidad Valenciana
+    18, # Ceuta
+    19, # Melilla
+  ]
+  return region_id_to_INE_id[region_id]
 end
 
 def parse_file(filename)
@@ -68,7 +51,7 @@ def parse_file(filename)
   # I thought the CA name was a good key, but turns out it changes sligthly
   # with time. So we'll use the original id instead, part of the filename
   filename =~ /\/(\d\d)\_/
-  region_id = $1
+  region_id = get_INE_code($1.to_i)
   
   # First, get the metadata about the file from the first chunk of text
   title = doc.css('h1')[0]
@@ -76,18 +59,13 @@ def parse_file(filename)
   title.text.strip =~ /EJERCICIO +(\d\d\d\d)/
   year = $1
 
-  # And get the region name. The fetching script used to ensure that the page
-  # contained data, since it received a 404 for unavailable years. Now, instead,
-  # the site returns an empty table, so we need to be ready to stop parsing
-  # when we find one of those.
+  # The fetching script used to ensure that the page contained data, since it
+  # received a 404 for unavailable years. Now, instead, the site returns an empty table,
+  # so we need to be ready to stop parsing when we find one of those.
   return if doc.css('h3')[0].nil?
-  region_name = to_UTF8(doc.css('h3')[0].text)
-  region_name.gsub!(/\*$/, '')    # Remove trailing * indicating a footnote, e.g. Navarra 2015
-  region_name.gsub!(/\u00a0/, '') # Some weird Unicode no-break spaces sometimes
-  region_name.strip!
   
   # ...make sure it's fine...
-  if year.nil? or year.empty? or region_name.nil? or region_name.empty?
+  if year.nil? or year.empty?
     $stderr.puts "ERROR: can't read metadata for file [#{filename}]"
     return
   end
@@ -111,16 +89,15 @@ def parse_file(filename)
     #  - only for years after (and including) 2006
     #  - only for actual regions, ignore the total
     #  - only non-zero chapter-level data, ignore 'expense area' subtotals
-    if year.to_i >= 2006 and region_id != '00' and policy_id =~ /\d\d/ and !values.last.empty?
-      region_INE_code = get_INE_code(region_name)
-      data = [year, region_INE_code, policy_id, policy_label]
+    if year.to_i >= 2006 and region_id != 0 and policy_id =~ /\d\d/ and !values.last.empty?
+      data = [year, region_id, policy_id, policy_label]
       0.upto(9) {|i| data.push(values[i]) }
       puts CSV::generate_line(data)
     end
   end
 end
 
-puts 'year,region_id,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
+puts '#year,region_id,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
 
 # Parse all files in the given staging folder
 Dir["#{ARGV[0]}/*html"].each {|filename| parse_file(filename)}
