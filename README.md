@@ -35,7 +35,7 @@ Es posible que los datos de población del año en curso no estén aún disponib
 Una vez obtenidos los datos para el nuevo año, es necesario realizar estos cambios en DVMI:
 
 1. Añadir los datos de población al archivo `population.csv`.
-2. Actualizar el archivo con datos presupuestarios, `budget_data.csv`.
+2. Actualizar el archivo con datos presupuestarios, `budget_data.csv`. Ojo que la primera línea tiene que decir `year`, no `#year`.
 3. Modificar el array `availableYears` en `ccaa.js` para incluir el nuevo año.
 4. Modificar el texto introductorio en `ccaa/index.html` para hacer referencia al nuevo año.
 5. Cambiar la configuración del slider en `ccaa/index.html` para mostrar los nuevos años.
