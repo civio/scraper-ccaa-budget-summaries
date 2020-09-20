@@ -38,7 +38,7 @@ def get_INE_code(region_id)
     15, # Navarra
     16, # Euskadi
     17, # Rioja
-    10, # Comunidad Valenciana
+    10, # Comunidad Valenciana => This is out of order!
     18, # Ceuta
     19, # Melilla
   ]
