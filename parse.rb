@@ -18,28 +18,28 @@ end
 # seems more 'official', so we're using that.
 # Note: we used the region name inside the content initially, but there are several
 # different spellings per region in the source data 🤷‍♂️, it's a mess.
-def get_INE_code(region_id)
+def get_INE_code_and_label(region_id)
   region_id_to_INE_id = [
-    0,  # Total
-    1,  # Andalucía
-    2,  # Aragón
-    3,  # Asturías
-    4,  # Baleares
-    5,  # Canarias
-    6,  # Cantabria
-    7,  # Castilla León
-    8,  # Castilla La Mancha
-    9,  # Cataluña
-    11, # Extremadura
-    12, # Galicia
-    13, # Madrid
-    14, # Murcia
-    15, # Navarra
-    16, # Euskadi
-    17, # Rioja
-    10, # Comunidad Valenciana => This is out of order!
-    18, # Ceuta
-    19, # Melilla
+    [0,  'Total'],
+    [1,  'Andalucía'],
+    [2,  'Aragón'],
+    [3,  'Asturías'],
+    [4,  'Baleares'],
+    [5,  'Canarias'],
+    [6,  'Cantabria'],
+    [7,  'Castilla León'],
+    [8,  'Castilla La Mancha'],
+    [9,  'Cataluña'],
+    [11, 'Extremadura'],
+    [12, 'Galicia'],
+    [13, 'Madrid'],
+    [14, 'Murcia'],
+    [15, 'Navarra'],
+    [16, 'Euskadi'],
+    [17, 'Rioja'],
+    [10, 'Comunidad Valenciana'], # This is out of order!
+    [18, 'Ceuta'],
+    [19, 'Melilla']
   ]
   return region_id_to_INE_id[region_id]
 end
@@ -50,7 +50,7 @@ def parse_file(filename)
   # I thought the CA name was a good key, but turns out it changes sligthly
   # with time. So we'll use the original id instead, part of the filename
   filename =~ /\/(\d\d)\_/
-  region_id = get_INE_code($1.to_i)
+  region_id, region_label = get_INE_code_and_label($1.to_i)
   
   # First, get the metadata about the file from the first chunk of text
   title = doc.css('h1')[0]
@@ -89,14 +89,14 @@ def parse_file(filename)
     #  - only for actual regions, ignore the total
     #  - only non-zero chapter-level data, ignore 'expense area' subtotals
     if year.to_i >= 2006 and region_id != 0 and policy_id =~ /\d\d/ and !values.last.empty?
-      data = [year, region_id, policy_id, policy_label]
+      data = [year, region_id, region_label, policy_id, policy_label]
       0.upto(9) {|i| data.push(values[i]) }
       puts CSV::generate_line(data)
     end
   end
 end
 
-puts '#year,region_id,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
+puts '#year,region_id,region_label,policy_id,policy_label,1,2,3,4,5,6,7,8,9,total'  # Header expected by Javascript in DVMI
 
 # Parse all files in the given staging folder
 Dir["#{ARGV[0]}/*html"].each {|filename| parse_file(filename)}
