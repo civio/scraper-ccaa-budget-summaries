@@ -29,7 +29,7 @@ END_YEAR = ARGV[1].to_i
 # Go through the landing page so a 'session' is started, otherwise we'll get rejected later :/
 @agent.get(START_PAGE)
 
-# Download data and store into staging folder
+# Download data and store into staging folder
 def fetch_data(region, year)
   # Clasificación funcional por capítulos depurados IFL y PAC
   url = "#{DATA_PAGE}?cente=#{region}&ano=#{year}"

@@ -2,7 +2,7 @@
 
 ### Datos presupuestarios
 
-Los datos están disponibles en [la web del Ministerio de Hacienda][1], pero tenemos que descargarlos usando un scraper (que guarda las páginas en el directorio `staging_budget`) para parsearlos posteriormente:
+Los datos están disponibles en [la web del Ministerio de Hacienda][1], en 'Inicio > Consultas Datos Consolidados > Clasificación Funcional por capítulos depurados IFL y PAC', pero tenemos que descargarlos usando un scraper (que guarda las páginas en el directorio `staging_budget`) para parsearlos posteriormente:
 
     $ ruby fetch.rb 2010 2021
     $ ruby parse.rb staging_budget | sort > budget.sorted.csv
@@ -13,7 +13,7 @@ Ordenamos el resultado para que se pueda comparar con los datos ya existentes y 
 
 ### Datos de ejecución
 
-Los datos están disponibles en [otra web del Ministerio de Hacienda][1], pero tenemos que descargarlos usando el scraper con la opción `--actual` (que guarda las páginas en el directorio `staging_actual`) para parsearlos posteriormente:
+Los datos están disponibles en [otra web del Ministerio de Hacienda][1], en 'Inicio > Consulta Datos Consolidados > C. Funcional por Capítulos DC depurados IFL y PAC', pero tenemos que descargarlos usando el scraper con la opción `--actual` (que guarda las páginas en el directorio `staging_actual`) para parsearlos posteriormente:
 
     $ ruby fetch.rb --actual 2010 2019
     $ ruby parse.rb staging_actual | sort > actual.sorted.csv
