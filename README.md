@@ -24,11 +24,14 @@ Ordenamos el resultado para que se pueda comparar con los datos ya existentes y 
 
 ### Datos de población
 
-Disponibles en la [web del INE][2]. Elegimos el año que nos interese, y todas las comunidades autónomas, y luego descargamos como Excel. (Ojo que si intentamos copi-pegar directamente podemos perder los ceros finales.) Hay que modificar un poco el formato para que encaje en lo que necesitamos, lo más sencillo es toquetear un poco en Excel.
+Disponibles en la [web del INE][4]. Elegimos el año que nos interese, y todas las comunidades autónomas, y luego descargamos como CSV. (Ojo que si intentamos copi-pegar directamente podemos perder los ceros finales.) Hay que modificar un poco el formato para que encaje en lo que necesitamos, lo más sencillo es toquetear un poco en Excel.
 
-Es posible que los datos de población del año en curso no estén aún disponibles. En ese caso tenemos que duplicar los del año anterior, porque el mapa no es capaz de "rellenar huecos" como sí hace la aplicación principal. (20240228: He tenido que hacer esto -temporalmente- con los datos de 2022 y 2023.)
+Es posible que los datos de población del año en curso no estén aún disponibles. En ese caso tenemos que duplicar los del año anterior, porque el mapa no es capaz de "rellenar huecos" como sí hace la aplicación principal.
 
-[2]: https://www.ine.es/jaxiT3/Tabla.htm?t=2853&L=0
+20241118: En febrero había tenido que rellenar los datos de 2022 y 2023, pero incluso ahora siguen sin estar. Parece que los resúmenes del Padrón por CCAA que usaba [3] ya no se actualizan, así que paso a usar la Estadística continua de población, que sí se actualiza siempre y parece lo mejor en cualquier caso.
+
+[3]: https://www.ine.es/jaxiT3/Tabla.htm?t=2853&L=0
+[4]: https://www.ine.es/jaxiT3/Tabla.htm?t=56940&L=0
 
 ### Actualizando Dónde van mis impuestos
 
