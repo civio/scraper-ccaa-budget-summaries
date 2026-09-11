@@ -17,7 +17,7 @@ class SummaryPageTest < Minitest::Test
   # in between. Population comes from the INE, so the INE's number is the one we publish.
   def test_translates_the_ministry_numbering_into_the_ine_one
     assert_equal 10, page(VALENCIA).ine_region_id
-    assert_equal 'Comunidad Valenciana', page(VALENCIA).region_label
+    assert_equal 'Comunitat Valenciana', page(VALENCIA).region_label
 
     assert_equal 11, page(EXTREMADURA).ine_region_id
     assert_equal 'Extremadura', page(EXTREMADURA).region_label

@@ -8,18 +8,21 @@
 # Note: we used the region name inside the content initially, but there are several different
 # spellings per region in the source data 🤷‍♂️, it's a mess. The number in the file name is
 # the only stable key.
+#
+# The names below are DVMI's own, copied from the ccaaLabels array in
+# static/javascripts/ccaa.js in civio/presupuesto-pge, which is what the map actually shows.
 module Regions
   # Indexed by the ministry's number, 0: total, 1: Andalucía... 19: Melilla. Each entry is
   # the INE id and the label we publish.
   INE_CODES_AND_LABELS = [
-    [0,  'Total'],
+    [0,  'Todas'],
     [1,  'Andalucía'],
     [2,  'Aragón'],
-    [3,  'Asturías'],
-    [4,  'Baleares'],
+    [3,  'Asturias'],
+    [4,  'Illes Balears'],
     [5,  'Canarias'],
     [6,  'Cantabria'],
-    [7,  'Castilla León'],
+    [7,  'Castilla y León'],
     [8,  'Castilla La Mancha'],
     [9,  'Cataluña'],
     [11, 'Extremadura'],
@@ -27,9 +30,9 @@ module Regions
     [13, 'Madrid'],
     [14, 'Murcia'],
     [15, 'Navarra'],
-    [16, 'Euskadi'],
-    [17, 'Rioja'],
-    [10, 'Comunidad Valenciana'], # This is out of order!
+    [16, 'País Vasco'],
+    [17, 'La Rioja'],
+    [10, 'Comunitat Valenciana'], # This is out of order!
     [18, 'Ceuta'],
     [19, 'Melilla']
   ].freeze
