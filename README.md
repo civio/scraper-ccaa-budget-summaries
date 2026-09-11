@@ -153,3 +153,8 @@ GitHub Actions ejecuta el linter, la auditoría de dependencias y los tests en c
 cada pull request (ver `.github/workflows/ci.yml`). Los tests que se ejecutan en CI son
 todos, incluido el que compara contra los CSV publicados, porque las páginas del Ministerio
 están en el repositorio y no hay nada que descargar.
+
+Dependabot propone actualizaciones de gemas y de actions una vez al mes, agrupando las menores
+en un solo PR. Las mayores llegan de una en una: la que importa es nokogiri, porque cualquier
+cambio en cómo libxml2 trata estas páginas se vería como un diff en los CSV publicados. Eso lo
+detecta el propio CI, así que un PR de nokogiri en verde se puede fusionar sin más.
