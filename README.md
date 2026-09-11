@@ -134,3 +134,17 @@ generando exactamente `budget.sorted.csv` y `actual.sorted.csv`. Es la red de se
 verdad: es lo que detectaría un cambio en nokogiri, en libxml2 o en lo que publica el
 Ministerio. Como las páginas están en el repositorio, se ejecuta en cualquier sitio, CI
 incluido, sin necesidad de descargar nada.
+
+
+Calidad de código
+=================
+
+    $ bundle exec rubocop
+    $ bundle exec bundle-audit check --update
+
+RuboCop pasa limpio y no hay `.rubocop_todo.yml`: el código que quedaba de 2013 se reescribió
+al pasar a Ruby 3.4, así que no hay nada que eximir. Si algún día hace falta uno:
+
+    $ bundle exec rubocop --auto-gen-config --auto-gen-only-exclude --exclude-limit 30
+
+La configuración está en `.rubocop.yml`, y cada excepción lleva escrito su porqué.

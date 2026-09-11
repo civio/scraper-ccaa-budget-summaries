@@ -18,7 +18,11 @@ class SummaryPageTest < Minitest::Test
   def test_translates_the_ministry_numbering_into_the_ine_one
     assert_equal 10, page(VALENCIA).ine_region_id
     assert_equal 'Comunitat Valenciana', page(VALENCIA).region_label
+  end
 
+  # Filing Comunitat Valenciana tenth rather than last pushes everything from Extremadura on
+  # one place along, which is where this would go wrong quietly if it went wrong
+  def test_and_displaces_every_region_between_there_and_the_end
     assert_equal 11, page(EXTREMADURA).ine_region_id
     assert_equal 'Extremadura', page(EXTREMADURA).region_label
   end

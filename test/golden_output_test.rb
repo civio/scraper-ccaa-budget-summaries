@@ -31,8 +31,12 @@ class GoldenOutputTest < Minitest::Test
     actual = File.readlines(produced)
 
     refute_empty actual, "#{File.basename(produced)} came out with nothing in it"
-    # The message is a block so that it is only built when there is something to report.
-    # assert_equal on files this size would dump a megabyte either way.
+
+    # Deliberately not assert_equal, which appends its own diff of the two arrays to whatever
+    # message it is given: on files this size that is a megabyte of output for a one line
+    # change. Plain `assert` uses only the message it is handed, and takes it as a block, so
+    # `report` only runs when there is something to report.
+    # rubocop:disable-next Minitest/AssertEqual, Minitest/AssertOperator, Minitest/AssertWithExpectedArgument
     assert expected == actual, -> { report(published, expected, actual) }
   end
 
