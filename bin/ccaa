@@ -1,0 +1,74 @@
+#!/usr/bin/env ruby
+# Command line interface to the CCAA budget summary scraper.
+#
+#   bin/ccaa fetch budget    download the summary pages into staging_budget/
+#   bin/ccaa parse budget    turn them into budget.sorted.csv
+#
+# 'budget' is what each region approved for the year, 'actual' what it reported spending.
+
+require 'fileutils'
+require 'optparse'
+
+require_relative '../lib/dataset'
+require_relative '../lib/summary_fetcher'
+require_relative '../lib/summary_parser'
+
+COMMANDS = %w[fetch parse].freeze
+
+# DVMI shows the years from 2006 on, and the site has nothing older
+FIRST_YEAR = 2006
+
+options = {}
+parser = OptionParser.new do |opts|
+  opts.banner = "Usage: bin/ccaa {#{COMMANDS.join('|')}} {#{Dataset::NAMES.join('|')}} [options]"
+  opts.separator ''
+  opts.separator '  fetch     Download the summary pages from the ministry site'
+  opts.separator '  parse     Turn the staged pages into the published CSV'
+  opts.separator ''
+
+  opts.on('-i', '--input PATH',
+          'Staging folder: where fetch writes the pages and parse reads them',
+          '(default: staging_DATASET)') { |v| options[:input] = v }
+  opts.on('-o', '--output PATH',
+          'CSV to write (default: DATASET.sorted.csv)') { |v| options[:output] = v }
+  opts.on('-f', '--from YEAR', Integer,
+          "First year to fetch (default: #{FIRST_YEAR})") { |v| options[:from] = v }
+  opts.on('-t', '--to YEAR', Integer,
+          'Last year to fetch (default: the current one)') { |v| options[:to] = v }
+  opts.on('-h', '--help', 'Show this message') do
+    puts opts
+    exit
+  end
+end
+parser.parse!
+
+command, name = ARGV
+abort parser.help if command.nil? || name.nil?
+abort "Unknown command '#{command}'.\n\n#{parser.help}" unless COMMANDS.include?(command)
+
+dataset = Dataset[name]
+abort "Unknown dataset '#{name}', expected #{Dataset::NAMES.join(' or ')}.\n\n#{parser.help}" if dataset.nil?
+
+root = File.expand_path('..', __dir__)
+staging_path = options[:input] || File.join(root, dataset.staging_folder)
+output_path = options[:output] || File.join(root, dataset.output_file)
+years = (options[:from] || FIRST_YEAR)..(options[:to] || Time.now.year)
+
+case command
+when 'fetch'
+  abort "'#{years}' is not a range of years" if years.none?
+
+  FileUtils.mkdir_p(staging_path)
+  puts "Fetching the #{dataset.name} summaries for #{years} into #{staging_path}"
+  pages = SummaryFetcher.new(dataset, staging_path, years).run
+  puts "Saved #{pages} pages"
+when 'parse'
+  unless File.directory?(staging_path)
+    abort "Can't find the staged pages for #{dataset.name}. Expected #{staging_path}/, " \
+          'or pass --input PATH.'
+  end
+
+  puts "Parsing the #{dataset.name} summaries in #{staging_path}"
+  rows = SummaryParser.new(staging_path, output_path).run
+  puts "Wrote #{rows} rows to #{output_path}"
+end

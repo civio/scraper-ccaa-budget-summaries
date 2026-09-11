@@ -1,0 +1,23 @@
+plugins:
+  - rubocop-minitest
+
+AllCops:
+  # The Ruby version comes from .ruby-version, so it cannot drift from it.
+  NewCops: enable
+  DisplayStyleGuide: true
+
+# The parsers are the documentation here: the comment at the top of each class explains what
+# the ministry does and why the code answers it that way. A class-level comment saying
+# "the summary parser" on top of that would be noise.
+Style/Documentation:
+  Enabled: false
+
+# Ruby 3.4 makes the question moot, and adding the magic comment to eleven files would be a
+# diff with no reader.
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Same limit as civio-crm and scraper-pge, so the Ruby repos agree. Long lines here are
+# mostly the ministry URLs in comments, which the cop already exempts.
+Layout/LineLength:
+  Max: 120
