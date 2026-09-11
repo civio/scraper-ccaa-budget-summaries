@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  # Its own job, so a lint failure never hides a test failure: both always run and the PR
+  # shows which one is red.
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run RuboCop
+        run: bundle exec rubocop
+
+      # The advisory database is updated first, so this checks against today's advisories
+      # rather than whatever shipped with the gem. Dependabot watches the same ground, but
+      # this turns an advisory into a red build instead of a notification.
+      - name: Audit the dependencies
+        run: bundle exec bundle-audit check --update
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      # This is the whole suite, golden test included: it reparses all 760 pages and compares
+      # the result against the published CSVs. It can, because the pages are in the repository
+      # -- so a change in nokogiri or libxml2 that moved a single row would turn this red
+      # rather than being found months later by eye.
+      - name: Run tests
+        run: bundle exec ruby test/all.rb

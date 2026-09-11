@@ -148,3 +148,8 @@ al pasar a Ruby 3.4, así que no hay nada que eximir. Si algún día hace falta 
     $ bundle exec rubocop --auto-gen-config --auto-gen-only-exclude --exclude-limit 30
 
 La configuración está en `.rubocop.yml`, y cada excepción lleva escrito su porqué.
+
+GitHub Actions ejecuta el linter, la auditoría de dependencias y los tests en cada push y
+cada pull request (ver `.github/workflows/ci.yml`). Los tests que se ejecutan en CI son
+todos, incluido el que compara contra los CSV publicados, porque las páginas del Ministerio
+están en el repositorio y no hay nada que descargar.
