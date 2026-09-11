@@ -5,6 +5,16 @@
 class Dataset
   NAMES = %w[budget actual].freeze
 
+  BASE_URL = 'https://serviciostelematicosext.hacienda.gob.es/SGCIEF'.freeze
+
+  # The application each dataset lives in, and the name of its landing page. Both
+  # applications serve the summaries from a page called Consulta_CFuncionalDCD.aspx:
+  # 'Clasificación funcional por capítulos depurados IFL y PAC'.
+  SITES = {
+    'budget' => %w[PublicacionPresupuestos inicio.aspx],
+    'actual' => %w[PublicacionLiquidaciones menuInicio.aspx]
+  }.freeze
+
   attr_reader :name
 
   # The dataset with this name, or nil
@@ -25,5 +35,18 @@ class Dataset
   # anomaly, which is what the file name has always said.
   def output_file
     "#{name}.sorted.csv"
+  end
+
+  # The page a caller has to go through before the site will serve it any data
+  def start_page
+    application, landing_page = SITES.fetch(name)
+    "#{BASE_URL}/#{application}/aspx/#{landing_page}"
+  end
+
+  # The summary for one region and year. The region is the ministry's own number, zero
+  # padded, which is also what ends up in the staged file name.
+  def data_page(region, year)
+    application, = SITES.fetch(name)
+    "#{BASE_URL}/#{application}/aspx/Consulta_CFuncionalDCD.aspx?cente=#{region}&ano=#{year}"
   end
 end

@@ -1,36 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.9.0)
-      public_suffix (>= 2.0.2, < 8.0)
-    base64 (0.3.0)
-    connection_pool (3.0.2)
     csv (3.3.6)
-    domain_name (0.6.20260907)
-    http-cookie (1.1.6)
-      domain_name (~> 0.5)
-    logger (1.7.0)
-    mechanize (2.14.1)
-      addressable (~> 2.8)
-      base64
-      domain_name (~> 0.5, >= 0.5.20190701)
-      http-cookie (~> 1.0, >= 1.0.3)
-      mime-types (~> 3.3)
-      net-http-digest_auth (~> 1.4, >= 1.4.1)
-      net-http-persistent (>= 2.5.2, < 5.0.dev)
-      nkf
-      nokogiri (~> 1.11, >= 1.11.2)
-      rubyntlm (~> 0.6, >= 0.6.3)
-      webrick (~> 1.7)
-      webrobots (~> 0.1.2)
-    mime-types (3.7.0)
-      logger
-      mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2026.0701)
-    net-http-digest_auth (1.4.1)
-    net-http-persistent (4.0.8)
-      connection_pool (>= 2.2.4, < 4)
-    nkf (0.3.0)
     nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.4-aarch64-linux-musl)
@@ -47,13 +18,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-musl)
       racc (~> 1.4)
-    optimist (3.2.1)
-    public_suffix (7.0.5)
     racc (1.8.1)
-    rubyntlm (0.6.6)
-      base64
-    webrick (1.9.2)
-    webrobots (0.1.2)
 
 PLATFORMS
   aarch64-linux-gnu
@@ -67,9 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   csv
-  mechanize
   nokogiri
-  optimist
 
 RUBY VERSION
    ruby 3.4.9p82
