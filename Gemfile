@@ -7,3 +7,7 @@ gem 'nokogiri'
 
 # A bundled gem since Ruby 3.4, so it has to be declared explicitly
 gem 'csv'
+
+group :development, :test do
+  gem 'minitest'
+end
