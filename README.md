@@ -66,9 +66,8 @@ Las páginas descargadas
 Están en `staging_budget/` y `staging_actual/`, una por comunidad y año, tal cual las sirvió
 el Ministerio. Sí están en el repositorio: son 29 MB en disco pero apenas 1,4 MB comprimidas,
 porque se parecen mucho entre sí, y a cambio los CSV se pueden regenerar desde cero sin tocar
-la red y sin depender de que el Ministerio siga publicando lo mismo. En el scraper de los
-Presupuestos Generales del Estado hay un presupuesto cuya fuente se retiró y que ya no se
-puede volver a generar.
+la red. Que una fuente siga publicada dentro de unos años no es algo que se pueda dar por
+supuesto, y una vez retirada no hay forma de volver a generar los datos que salieron de ella.
 
 Un aviso sobre la codificación, porque parece un error y no lo es: las páginas declaran
 `charset=iso-8859-1` en un meta y llegan en UTF-8. `SummaryPage` las lee como ISO-8859-1 a
@@ -133,5 +132,5 @@ Ministerio no nos ha servido nunca.
 Además, `test/golden_output_test.rb` vuelve a procesar las 760 páginas y comprueba que siguen
 generando exactamente `budget.sorted.csv` y `actual.sorted.csv`. Es la red de seguridad de
 verdad: es lo que detectaría un cambio en nokogiri, en libxml2 o en lo que publica el
-Ministerio. A diferencia de su equivalente en el scraper de los PGE, aquí sí se ejecuta en
-cualquier sitio, CI incluido, porque las páginas están en el repositorio.
+Ministerio. Como las páginas están en el repositorio, se ejecuta en cualquier sitio, CI
+incluido, sin necesidad de descargar nada.
